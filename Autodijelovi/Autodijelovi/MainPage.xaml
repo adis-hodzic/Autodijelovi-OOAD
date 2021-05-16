@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="Autodijelovi.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Autodijelovi"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    RequestedTheme="Dark"
+    BorderBrush="Black"
+    BorderThickness="50">
+
+    <UserControl.Resources>
+
+    </UserControl.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Light" Margin="0,0,10,10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="279*"/>
+            <ColumnDefinition Width="131*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Image Source="Assets/K.jpg" Margin="-128,-663,-128,513" RenderTransformOrigin="-3.836,7.967" Height="150" Width="200" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Image.RenderTransform>
+                <CompositeTransform ScaleY="-1" TranslateY="-2240.1"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="Assets/autodijelovi.jpg" Height="580" Width="1000" Grid.ColumnSpan="2" Margin="-468,-105,-532,-475" Grid.RowSpan="3"/>
+        <TextBlock  HorizontalAlignment="Left" Margin="254,246,-467,-297" Text="Korisnicko ime: " VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="51" UseLayoutRounding="False" Width="213" d:LayoutRounding="Auto" FontSize="30" FontFamily="Arial Rounded MT Bold" RequestedTheme="Light" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="0.243"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBox x:Name="korisnicko" BorderThickness="3" BorderBrush="Black" HorizontalAlignment="Left" Margin="504,233,-827,-285" Text="" VerticalAlignment="Top"  Width="323" RequestedTheme="Light" Height="52" FontSize="30" Grid.ColumnSpan="2" TextChanged="TextBox_TextChanged" Grid.RowSpan="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="386,314,-698,-406" Text="Sifra: " TextWrapping="Wrap" VerticalAlignment="Top" Height="92" Width="312" FontSize="30" Grid.ColumnSpan="2" Grid.RowSpan="3" SelectionChanged="TextBlock_SelectionChanged"/>
+        <TextBox x:Name="sifra" BorderThickness="3" BorderBrush="Black" HorizontalAlignment="Left" Margin="504,302,-827,-354" Text="" VerticalAlignment="Top" Width="323" Height="52" Grid.ColumnSpan="2" Grid.RowSpan="3" FontSize="30"/>
+        <Button Content="Log in" HorizontalAlignment="Left" Margin="917,263,-1167,-317" VerticalAlignment="Top" FontSize="30" Height="54" Width="250" Click="Button_Click" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="87,81,-569,-171" Text="Autodijelovi" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="80" FontFamily="Axure Handwriting" Height="90" Width="482"  FontWeight="Normal" FontStyle="Italic" Grid.ColumnSpan="2" Grid.RowSpan="3" />
+        <TextBlock HorizontalAlignment="Left" Margin="838,81,-1388,-173" Text="Kameni" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="80" FontFamily="Axure Handwriting" Width="550" RenderTransformOrigin="0.609,0.542" FontStyle="Italic" Grid.ColumnSpan="2" Grid.RowSpan="3" Height="92"/>
+        <Frame Name="Sljedeci">
+            <Button Content="Back" HorizontalAlignment="Left" Margin="155,477,0,0" VerticalAlignment="Top" FontSize="24" Click="BackButton_Click"/>
+        </Frame>
+    </Grid>
+</Page>
